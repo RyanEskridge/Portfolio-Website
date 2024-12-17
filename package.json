@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My personal website where I show off my current projects and qualifications.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "Ryan Eskridge",
+  "license": "MIT",
+  "dependencies": {
+    "css-animation-sync": "^0.5.0",
+    "express": "^4.21.1",
+    "express-handlebars": "^8.0.1",
+    "path": "^0.12.7",
+    "sequelize": "^6.37.5",
+    "sqlite3": "^5.1.7",
+    "uuid": "^11.0.3"
+  },
+  "devDependencies": {
+    "vite": "^6.0.3"
+  }
+}
