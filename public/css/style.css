@@ -13,6 +13,49 @@ body {
     background-color: #fff;
 }
 
+h1 {
+    font-family: "Saria", sans-serif;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 700;
+}
+
+h2 {
+    font-family: "Saria", sans-serif;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 700;
+}
+
+h3 {
+    font-family: "Saria", sans-serif;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 700;
+}
+
+h4 {
+    font-family: "Saria", sans-serif;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 700;
+}
+
+h5 {
+    font-family: "Saria", sans-serif;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 700;
+}
+
+h6 {
+    font-family: "Saria", sans-serif;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 700;
+}
+
+
 .saria-devName {
     font-family: "Saria", sans-serif;
     font-size: 100px;
@@ -172,6 +215,20 @@ body {
     overflow: hidden;
 }
 
+.card-xlarge {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 40em;
+    height: 21em;
+    margin: 0.5em;
+    margin-bottom: 20em;
+    border: 2px solid #3d3d3d;
+    border-radius: 15px;
+    background-color: #202020;
+    overflow: hidden;
+}
+
 .card-social {
     position: relative;
     align-items: center;
@@ -180,6 +237,7 @@ body {
     height: 2.25em;
     margin: 0.5em;
     overflow: hidden;
+    margin-bottom: 15em;
 }
 
 .resume-link {
