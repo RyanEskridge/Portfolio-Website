@@ -14,6 +14,7 @@ body {
 }
 
 h1 {
+    color: #fff;
     font-family: "Saria", sans-serif;
     font-style: normal;
     font-variation-settings:
@@ -21,6 +22,7 @@ h1 {
 }
 
 h2 {
+    color: #fff;
     font-family: "Saria", sans-serif;
     font-style: normal;
     font-variation-settings:
@@ -28,6 +30,7 @@ h2 {
 }
 
 h3 {
+    color: #fff;
     font-family: "Saria", sans-serif;
     font-style: normal;
     font-variation-settings:
@@ -35,6 +38,7 @@ h3 {
 }
 
 h4 {
+    color: #fff;
     font-family: "Saria", sans-serif;
     font-style: normal;
     font-variation-settings:
@@ -42,6 +46,7 @@ h4 {
 }
 
 h5 {
+    color: #fff;
     font-family: "Saria", sans-serif;
     font-style: normal;
     font-variation-settings:
@@ -49,6 +54,7 @@ h5 {
 }
 
 h6 {
+    color: #fff;
     font-family: "Saria", sans-serif;
     font-style: normal;
     font-variation-settings:
@@ -240,6 +246,9 @@ h6 {
     margin-bottom: 15em;
 }
 
+.card-description {
+    color: #fff;
+}
 .resume-link {
     font-family: "Saria", sans-serif;
     position: absolute;
@@ -353,6 +362,7 @@ h6 {
         color: #000;
         background-color: #fff;
     }
+
     .wipe-mask {
         background-color: #fff;
     }
