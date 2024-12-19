@@ -2,7 +2,7 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const app = express();
 const path = require('path');
-const { title } = require('process');
+const { getLatestCommitMessage } = require('./middleware/gitHelper');
 
 
 app.use(express.urlencoded({ extended: true }));
@@ -39,6 +39,16 @@ app.get('/', async (req, res) => {
         res.status(500).send('Internal Server Error')
     }
 });
+
+/* Git message helper */
+app.get('/latest-commit', async (req, res) => {
+    try {
+      const commitMessage = await getLatestCommitMessage();
+      res.json({ message: commitMessage });
+    } catch (error) {
+      res.status(500).json({ error: error });
+    }
+  });
 
 // App start
 const PORT = process.env.PORT || 3000;

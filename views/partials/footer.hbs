@@ -2,9 +2,35 @@
     <div class="copyright">
         &copy; {{year}} {{name}}. All Rights Reserved.
     </div>
+    <p style="font-size: 12px;" id="commitMessage">Loading...</p>
     <div class="photography-link">
         <!--<a href="{{photographyLink}}" target="_blank" rel="noopener noreferrer">
             Visit My Photography Page
         </a> -->
     </div>
 </footer>
+
+ <script>
+    // Fetch the latest commit message from the server
+    fetch('/latest-commit')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        // Display the commit message in the <p> block
+        const commitMessageElement = document.getElementById('commitMessage');
+        const originalMessage = data.message || 'No commit message found.';
+        const appendedText = "Latest commit: ";
+        commitMessageElement.textContent = appendedText + originalMessage;
+      })
+      .catch(error => {
+        // Handle errors
+        const commitMessageElement = document.getElementById('commitMessage');
+        commitMessageElement.textContent = `Error fetching commit message: ${error.message}`;
+      });
+  </script>
+</body>
+</html>
