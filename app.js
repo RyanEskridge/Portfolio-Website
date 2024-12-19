@@ -29,10 +29,12 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.get('/', async (req, res) => {
     try {
+        const commitMessage = await getLatestCommitMessage();
         res.render('home',{
             title: 'Home',
             year: new Date().getFullYear(),
             name: 'Ryan Eskridge',
+            commitMessage: 'Latest commit: ' + commitMessage,
         });
     } catch (error) {
         console.error('Error: ', error);
