@@ -4,18 +4,17 @@ body, html {
     padding: 0;
     width: 100%;
     height: 100%;
-    
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Saira", sans-serif;
     color: #000;
     background-color: #fff;
 }
 
 h1 {
     color: #fff;
-    font-family: "Saria", sans-serif;
+    font-family: "Saira", sans-serif;
     font-style: normal;
     font-variation-settings:
         "wdth" 700;
@@ -23,7 +22,7 @@ h1 {
 
 h2 {
     color: #fff;
-    font-family: "Saria", sans-serif;
+    font-family: "Saira", sans-serif;
     font-style: normal;
     font-variation-settings:
         "wdth" 700;
@@ -31,7 +30,7 @@ h2 {
 
 h3 {
     color: #fff;
-    font-family: "Saria", sans-serif;
+    font-family: "Saira", sans-serif;
     font-style: normal;
     font-variation-settings:
         "wdth" 700;
@@ -39,7 +38,7 @@ h3 {
 
 h4 {
     color: #fff;
-    font-family: "Saria", sans-serif;
+    font-family: "Saira", sans-serif;
     font-style: normal;
     font-variation-settings:
         "wdth" 700;
@@ -47,7 +46,7 @@ h4 {
 
 h5 {
     color: #fff;
-    font-family: "Saria", sans-serif;
+    font-family: "Saira", sans-serif;
     font-style: normal;
     font-variation-settings:
         "wdth" 700;
@@ -55,7 +54,7 @@ h5 {
 
 h6 {
     color: #fff;
-    font-family: "Saria", sans-serif;
+    font-family: "Saira", sans-serif;
     font-style: normal;
     font-variation-settings:
         "wdth" 700;
@@ -63,8 +62,8 @@ h6 {
 
 
 .saria-devName {
-    font-family: "Saria", sans-serif;
-    font-size: 6vw;
+    font-family: "Saira", sans-serif;
+    font-size: 100px;
     font-optical-sizing: auto;
     font-weight: bold;
     font-style: normal;
@@ -77,8 +76,8 @@ h6 {
 }
 
 .saria-subtitle {
-    font-family: "Saria", sans-serif;
-    font-size: 2vw;
+    font-family: "Saira", sans-serif;
+    font-size: 25px;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
@@ -89,8 +88,18 @@ h6 {
         "wdth" 700;
 }
 
+.animated-text {
+    font-family: "Saira", sans-serif;
+    font-size: 25px;
+    margin-left: 0px;
+    position: relative;
+    z-index: 1;
+    animation: fade 3250ms linear infinite;
+    line-height: 1; 
+}
+
 .saria-heading {
-    font-family: "Saria", sans-serif;
+    font-family: "Saira", sans-serif;
     font-size: 80px;
     font-optical-sizing: auto;
     font-weight: bold;
@@ -103,8 +112,8 @@ h6 {
 .saria-card-text {
     color: #fff;
     width: 100%;
-    font-family: "Saria", sans-serif;
-    font-size: 0.75em;
+    font-family: "Saira", sans-serif;
+    font-size: clamp(1rem, 2vw, 30px);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -121,7 +130,7 @@ h6 {
 .saria-card-text-large {
     color: #fff;
     width: 100%;
-    font-family: "Saria", sans-serif;
+    font-family: "Saira", sans-serif;
     font-size: 0.75em;
     position: absolute;
     top: 50%;
@@ -137,7 +146,7 @@ h6 {
 }
 
 .saria-card-title {
-    font-family: "Saria", sans-serif;
+    font-family: "Saira", sans-serif;
     font-size: 0.75em;
     font-weight: bold;
     color: #ffffff;
@@ -147,7 +156,6 @@ h6 {
 
 .text-container {
     position: relative;
-    width: 20em;
     display: flex;
     align-items: center; 
     font-size: 1em; 
@@ -156,15 +164,7 @@ h6 {
     margin: 0px;
     padding: 0px;
     text-align: left;
-}
-
-.animated-text {
-    font-size: 2vw;
-    margin-left: 0px;
-    position: relative;
-    z-index: 1;
-    animation: fade 3250ms linear infinite;
-    line-height: 1; 
+    margin-left: 8px;
 }
 
 .wipe-mask {
@@ -178,7 +178,8 @@ h6 {
 }
 
 .name-container {
-    height: 100vh;
+    margin-top: -100px;
+    min-height: 100vh;
     margin-bottom: 10em;
 }
 
@@ -208,7 +209,9 @@ h6 {
     position: relative;
     align-items: center;
     justify-content: center;
-    width: 15vw;
+    width: 18vw;
+    min-width: 400px;
+    max-width: 400px;
     aspect-ratio: 11 / 7;
     margin: 0.5vw;
     border: 2px solid #3d3d3d;
@@ -221,7 +224,9 @@ h6 {
     align-items: center;
     justify-content: center;
     width: 30vw;
-    aspect-ratio: 14 / 7;
+    min-width: 400px;
+    max-width: 550px;
+    aspect-ratio: 14 / 8;
     border: 2px solid #3d3d3d;
     border-radius: 15px;
     background-color: #202020;
@@ -233,7 +238,8 @@ h6 {
     align-items: center;
     justify-content: center;
     width: 40vw;
-    aspect-ratio: 14 / 7;
+    min-width: 400px;
+    max-width: 600px;
     margin: 0.5em;
     margin-bottom: 20em;
     border: 2px solid #3d3d3d;
@@ -246,8 +252,8 @@ h6 {
     position: relative;
     align-items: center;
     justify-content: center;
-    width: 2.5em;
-    height: 2.25em;
+    width: 5vh;
+    height: 5vh;
     margin: 0.5em;
     overflow: hidden;
     margin-bottom: 15em;
@@ -256,13 +262,14 @@ h6 {
 .card-description {
     color: #fff;
 }
+
 .resume-link {
-    font-family: "Saria", sans-serif;
+    font-family: "Saira", sans-serif;
     position: absolute;
-    width: 8em;
+    width: 20vh;
     top: 10px; 
     right: 10px; 
-    font-size: 0.9em;
+    font-size: 2vh;
     color: #ffffff; 
     text-decoration: none;
     font-weight: bold;
@@ -285,7 +292,7 @@ h6 {
 }
 
 .slide-down:hover .card-image {
-    transform: translateY(100%);
+    transform: translateY(110%);
 }
 
 .card:hover .saria-card-text {
