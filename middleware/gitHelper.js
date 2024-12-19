@@ -1,4 +1,5 @@
 const { exec } = require('child_process');
+const fs = require('fs').promises;
 
 /**
  * Gets the latest commit message from the local Git log.
