@@ -3,7 +3,7 @@
         In a hurry? View my resume here!
     </a>
 </div>
-<div class="container-fluid d-flex align-items-center justify-content-center name-container">
+<div style="margin-top: 25vh;" class="container-fluid d-flex align-items-center justify-content-center name-container">
     <div class="row text-center">
         <div class="col-14">
                 <div class="col-14">
@@ -17,9 +17,9 @@
         </div>
     </div>
     <div class="marker"></div>
-    <div class="chevron-container">
+    <!--<div class="chevron-container">
         <div id="chevron" class="chevron fas fa-chevron-down"></div>
-    </div>
+    </div>-->
 </div>
 <div class="container-fluid d-flex align-items-center justify-content-center name-container">
     <div class="card-container container-fluid text-center">
@@ -85,8 +85,9 @@
         <div class="row text-center justify-content-center">
             <div class="col-auto">
                 <div class="card-large slide-right">
-                    <!-- SmellsPhishy -->
+                    <div class="saria-card-title">SmellsPhishy</div>
                     <div class="saria-card-text-large">
+                        
                         A simple security tool that enables IT admins to test their users suseptibility to Phishing attacks. Capstone project built while attending Missouri State University.
                         <br>
                         <br>
@@ -94,7 +95,17 @@
                         <br>
                         <a href="https://github.com/RyanEskridge/SmellsPhishy" alt="A link to the SmellsPhishy Github repository.">Github</a>
                     </div>
-                    <img src="/img/clown-fish.png" alt="test" class="card-image image-large">
+                    <img src="/img/clown-fish.png" alt="A picture of the SmellsPhishy mascot, a cute clown fish." class="card-image image-large">
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="card-large slide-right">
+                    <div class="saria-card-title">Machine Learning Research</div>
+                    <div class="saria-card-text-large">
+                        New MARL approach introduces an Information Sharing Matrix (ISM) for robot teams, enhancing collaboration, adaptability, and global awareness. ISM-MARL outperforms decentralized methods and matches centralized performance across diverse scenarios.
+                        <a href="/ism" target="_blank" >Read the IEEE publication.</a>
+                    </div>
+                    <img src="/img/ISM.png" alt="test" class="card-image image-large">
                 </div>
             </div>
         </div>
@@ -150,7 +161,7 @@
 <!-- SCRIPTS -->
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        window.addEventListener('scroll', function () {
+        /*window.addEventListener('scroll', function () {
             let num = window.scrollY / window.innerHeight;
             let x = 0;
             if (window.scrollY >= 372) {
@@ -160,7 +171,7 @@
             if (num <= 1) {
                 document.getElementById('chevron').style.opacity = 1 - (num * 3 );
             }
-        }, false);
+        }, false);*/
 
         const strings = ["Developer", "Designer", "Contributor", "Problem Solver", "Shameless Dancer", "Friend"];
         const textElement = document.querySelector(".animated-text");

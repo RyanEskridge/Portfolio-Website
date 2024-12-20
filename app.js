@@ -19,6 +19,15 @@ app.get('/resume', (req, res) => {
     });
 });
 
+app.get('/ism', (req, res) => {
+    const filePath = path.join(__dirname, 'public', 'pdf', 'ISM_PAPER.pdf');
+    res.sendFile(filePath, (err) => {
+        if (err) {
+            res.status(404).send('Paper not found');
+        }
+    });
+});
+
 app.engine('hbs', exphbs.engine({
     extname: '.hbs',
     layoutsDir: path.join(__dirname, 'views/layouts'),
