@@ -60,6 +60,10 @@ h6 {
         "wdth" 700;
 }
 
+.main-content {
+    position: relative;
+}
+
 
 .saria-devName {
     font-family: "Saira", sans-serif;
@@ -168,9 +172,6 @@ h6 {
 }
 
 .wipe-mask {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 0%;
     height: 107%;
     animation: wipe 3250ms linear infinite;
@@ -178,9 +179,16 @@ h6 {
 }
 
 .name-container {
+    position: relative;
     margin-top: -100px;
     min-height: 50vh;
     margin-bottom: 10em;
+}
+
+.name-container-bottom {
+    position: relative;
+    margin-top: -100px;
+    margin-bottom: 0;
 }
 
 .card-image {
@@ -190,7 +198,9 @@ h6 {
 }
 
 .image-small {
-    height: 100%;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    max-width: 40px;
 }
 
 .image-medium {
@@ -204,6 +214,10 @@ h6 {
 
 .card-image-social:hover {
     opacity: 0.5;
+}
+
+.card-container {
+    position: relative;
 }
 
 .card {
@@ -235,6 +249,8 @@ h6 {
     margin: 0.5vw;
 }
 
+
+
 .card-xlarge {
     position: relative;
     align-items: center;
@@ -249,15 +265,26 @@ h6 {
     overflow: hidden;
 }
 
+.contact-container {
+    position: sticky;
+    bottom: 0%;
+    left: 50vw;
+    transform: translate(-50%, -20%);
+    z-index: 9999; 
+    padding: 20px; 
+    width: 5%;
+    aspect-ratio: 4 / 1;
+    min-width: 250px;
+    min-height: 75px;
+    border: solid 2px white;
+    border-radius: 10px;
+}
+
 .card-social {
     position: relative;
-    align-items: center;
-    justify-content: center;
-    width: 5vh;
-    height: 5vh;
-    margin: 0.5em;
+    margin: 10px;
     overflow: hidden;
-    margin-bottom: 15em;
+    transform: translate(0%, -40%);;
 }
 
 .card-description {
@@ -401,6 +428,10 @@ h6 {
         content: url('/img/linkedin-light.png');
 
     }
+
+    .contact-container {
+        background-color: white;
+    }
 }
 
 /* Dark Mode */
@@ -429,7 +460,12 @@ h6 {
         content: url('/img/linkedin-dark.png');
 
     }
+
+    .contact-container {
+        background-color: black;
+    }
 }
+
 
 @media (max-width: 1000px) {
     .resume-link {
@@ -456,6 +492,7 @@ footer {
     background-color: #5e5e5e; 
     color: #ffffff; 
     font-family: Arial, sans-serif;
+    margin-top: 100px;
 }
 
 footer a {
