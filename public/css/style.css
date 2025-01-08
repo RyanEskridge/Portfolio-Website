@@ -93,6 +93,7 @@ h6 {
 }
 
 .animated-text {
+    position: absolute;
     font-family: "Saira", sans-serif;
     font-size: 25px;
     margin-left: 0px;
@@ -172,10 +173,12 @@ h6 {
 }
 
 .wipe-mask {
+    position: absolute;
     width: 0%;
     height: 107%;
     animation: wipe 3250ms linear infinite;
     z-index: 2;
+
 }
 
 .name-container {
@@ -255,9 +258,8 @@ h6 {
     position: relative;
     align-items: center;
     justify-content: center;
-    width: 40vw;
-    min-width: 400px;
-    max-width: 600px;
+    width: 80vw;
+    max-width: 1000px;
     margin: 0.5em;
     border: 2px solid #3d3d3d;
     border-radius: 15px;
@@ -276,7 +278,6 @@ h6 {
     aspect-ratio: 4 / 1;
     min-width: 250px;
     min-height: 75px;
-    border: solid 2px white;
     border-radius: 10px;
 }
 
@@ -419,18 +420,19 @@ h6 {
 
     .github-logo {
         display: block;
-        content: url('/img/github-light.png');
+        content: url('/img/github-dark.png');
 
     }
 
     .linkedin-logo {
         display: block;
-        content: url('/img/linkedin-light.png');
+        content: url('/img/linkedin-dark.png');
 
     }
 
     .contact-container {
-        background-color: white;
+        background-color: rgb(0, 0, 0);
+        border: solid 2px #3d3d3d;
     }
 }
 
@@ -462,7 +464,8 @@ h6 {
     }
 
     .contact-container {
-        background-color: black;
+        background-color: #353535;
+        border: solid 2px #3d3d3d;
     }
 }
 

@@ -7,8 +7,34 @@ const { getLatestCommitMessage } = require('./middleware/gitHelper');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
 // Public Routes
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.engine('hbs', exphbs.engine({
+    extname: '.hbs',
+    layoutsDir: path.join(__dirname, 'views/layouts'),
+    partialsDir: path.join(__dirname, 'views/partials')
+  }));
+
+app.set('view engine', 'hbs');
+
+app.set('views', path.join(__dirname, 'views'));
+
+app.get('/', async (req, res) => {
+    try {
+        const commitMessage = await getLatestCommitMessage();
+        res.render('home',{
+            title: 'Home',
+            year: new Date().getFullYear(),
+            name: 'Ryan Eskridge',
+            commitMessage: 'Latest commit: ' + commitMessage,
+        });
+    } catch (error) {
+        console.error('Error: ', error);
+        res.status(500).send('Internal Server Error')
+    }
+});
 
 app.get('/resume', (req, res) => {
     const filePath = path.join(__dirname, 'public', 'pdf', 'Ryan_Eskridge_Resume.pdf');
@@ -26,29 +52,6 @@ app.get('/ism', (req, res) => {
             res.status(404).send('Paper not found');
         }
     });
-});
-
-app.engine('hbs', exphbs.engine({
-    extname: '.hbs',
-    layoutsDir: path.join(__dirname, 'views/layouts'),
-    partialsDir: path.join(__dirname, 'views/partials')
-  }));
-app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'views'));
-
-app.get('/', async (req, res) => {
-    try {
-        const commitMessage = await getLatestCommitMessage();
-        res.render('home',{
-            title: 'Home',
-            year: new Date().getFullYear(),
-            name: 'Ryan Eskridge',
-            commitMessage: 'Latest commit: ' + commitMessage,
-        });
-    } catch (error) {
-        console.error('Error: ', error);
-        res.status(500).send('Internal Server Error')
-    }
 });
 
 /* Git message helper */
